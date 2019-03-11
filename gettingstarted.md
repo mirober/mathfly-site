@@ -13,7 +13,7 @@ Mathfly allows for dictation into both the free LyX document processor and Scien
 
 ## LyX
 
-If you haven't already, download and install the [LyX document processor](https://www.lyx.org/).
+If you haven\'t already, download and install the [LyX document processor](https://www.lyx.org/).
 
 1. Say `enable core` and `enable LyX` to activate all of the commands you will need.
 2. Open LyX. Say `new file` to open a blank document.
