@@ -57,7 +57,7 @@ If you haven\'t already, download and install the [LyX document processor](https
 ## LaTeX
 1. Say `enable core` and `enable LaTeX` to activate all of the commands you will need.
 2. Open up your text editor, notepad will do but I personally like Sublime Text.
-3. say the following commands:
+3. Say the following commands:
     * `document class article`
     * `shock two` - start a new line
     * `begin document`
