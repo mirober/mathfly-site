@@ -2,7 +2,13 @@
 layout: page
 title: Getting started
 ---
-# Getting started
+
+Once you have set up Mathfly, you should be greeted with the following window whenever you open Dragon. If this is not the case, or if there are error messages printed in the window, there may be a problem with your installation.
+
+![Natlink greeting]({{ site.baseurl }}/images/natlink_greeting.png)
+
+***
+
 ## Scientific Notebook 5.5
 1. Say `enable core` and `enable scientific notebook` to activate all of the commands you will need.
 2. Open Scientific notebook. Say `new file` to open a blank document.
@@ -19,7 +25,9 @@ title: Getting started
     * `numb two alpha` - note that the `numb` prefix is used to avoid confusion with the `down two` command.
     * `right shock` - move out of the fraction and begin a new line
 5. Try entering all of the commands in one or two breaths.
-6. Keep going! See the [Scientific Notebook 5.5 documentation](Scientific_Notebook.pdf) for a full list of the commands which you can use.
+6. Keep going! See the [Scientific Notebook 5.5 documentation]({{ site.baseurl }}/docs/Scientific_Notebook.pdf) for a full list of the commands which you can use.
+
+***
 
 ## LyX
 1. Say `enable core` and `enable LyX` to activate all of the commands you will need.
@@ -37,4 +45,4 @@ title: Getting started
     * `numb two alpha` - note that the `numb` prefix is used to avoid confusion with the `down two` command.
     * `right two shock` - move out of the fraction and the math box and begin a new line
 5. Try entering all of the commands in one or two breaths.
-6. Keep going! See the [LyX documentation](LyX.pdf) for a full list of the commands which you can use.
+6. Keep going! See the [LyX documentation]({{ site.baseurl }}/docs/LyX.pdf) for a full list of the commands which you can use.
