@@ -80,32 +80,39 @@
 
 <h2 id="2-natlink">2. NatLink</h2>
 <ul>
-  <li>Download and install <a href="https://sourceforge.net/projects/natlink/files/natlink/natlinktest4.1/">Natlink</a>. Use natlink-4.1 victor or newer.</li>
+  <li>Download and install <a href="https://qh.antenna.nl/unimacro/installation/installation.html">Natlink</a>. Use natlink-4.1 victor or newer.</li>
 </ul>
 
 <h2 id="3-mathfly">3. Mathfly</h2>
 <ol>
-  <li>Download Mathfly from <a href="https://github.com/mrob95/mathfly/archive/master.zip">master branch</a>.</li>
+  <li>Download Mathfly from the <a href="https://github.com/mrob95/mathfly/archive/master.zip">master branch</a>. 
+ <img src="/images/download.png" alt="Download" /></li>
   <li>Open up the zip file downloaded</li>
-  <li>Open the file <code class="highlighter-rouge">mathfly-master</code>. Copy and paste its contents into an empty folder, this can be any folder but it is common to use <code class="highlighter-rouge">user\Documents\NatLink</code>.</li>
-  <li>Check and install Mathfly dependencies by clicking on <code class="highlighter-rouge">Pip Install Dependencies.bat</code> in <code class="highlighter-rouge">\mathfly\config\bin</code>
+  <li>Open the file <code class="highlighter-rouge">mathfly-master</code>. Copy and paste its contents into an empty folder, this can be any folder but it is common to use <code class="highlighter-rouge">user\Documents\NatLink</code>.
+ <img src="/images/directory.png" alt="Directory" /></li>
+  <li>Check and install Mathfly dependencies by clicking on <code class="highlighter-rouge">Pip Install Dependencies.bat</code> in the main directory.
     <ul>
-      <li>This can be done manually by pip installing dragonfly2, toml</li>
+      <li>This can be done manually by pip installing dragonfly2, toml, future, setuptools, pywin32 and wxpython</li>
     </ul>
   </li>
 </ol>
 
 <h2 id="4-setup-and-launch">4. Setup and launch</h2>
 <ol>
-  <li>Open the start menu and search for “natlink”, click the file called “Configure NatLink via GUI” and run it using python 2.7 (<code class="highlighter-rouge">C:/python27/python.exe</code>).</li>
+  <li>Open the start menu and search for “natlink”, click the file called “Configure NatLink via GUI” and run it using python 2.7 (<code class="highlighter-rouge">C:/python27/python.exe</code>).
+ <img src="/images/configure_start.png" alt="Configure start" /></li>
   <li>Ensure that the details of your DNS setup are correct in the “info” tab.</li>
-  <li>In the “configure” tab, under “NatLink” and “UserDirectory” click enable. When you are prompted for a folder, give it the location of the folder containing <code class="highlighter-rouge">_mathfly_main.py</code> - your mathfly folder from step three (<code class="highlighter-rouge">user\Documents\NatLink\mathfly-master</code> or<code class="highlighter-rouge">user\Documents\NatLink\mathfly-master\mathfly-master\</code>).</li>
-  <li>Reboot Dragon. NatLink should load at the same time, with mathfly commands available. To test this:
+  <li>In the “configure” tab, under “NatLink” and “UserDirectory” click enable. When you are prompted for a folder, give it the location of the folder containing <code class="highlighter-rouge">_mathfly_main.py</code> - your mathfly folder from step three (<code class="highlighter-rouge">user\Documents\NatLink\mathfly-master</code>).
+ <img src="/images/configure_natlink.png" alt="Configure natlink" /></li>
+  <li>Reboot Dragon. NatLink should load at the same time, with mathfly commands available. 
+ <img src="/images/natlink_greeting.png" alt="Natlink greeting" /></li>
+  <li>To test this:
     <ul>
       <li>Say “enable core” to enable the core mathfly commands (numbers, phonetic alphabet).</li>
       <li>Open a fresh notepad window and try a command like “alpha bravo three hundred”.</li>
     </ul>
   </li>
+  <li>Continue to <a href="/gettingstarted.html">Getting started</a></li>
 </ol>
 
   </div>
