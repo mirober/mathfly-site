@@ -14,8 +14,8 @@ Make sure to select `Add python to path`. This can be done manually by searching
 * Download and install [Natlink](https://qh.antenna.nl/unimacro/installation/installation.html). Use natlink-4.1 victor or newer.
 
 ## 3. Mathfly
-1. Download Mathfly from the [master branch](https://github.com/mrob95/mathfly/archive/master.zip). 
-    ![Download]({{ site.baseurl }}/images/download.png)
+1. Download Mathfly from the [master branch](https://github.com/mrob95/mathfly/archive/master.zip).
+    <!-- ![Download]({{ site.baseurl }}/images/download.png) -->
 2. Open up the zip file downloaded
 3. Extract the `mathfly-master` folder, you can put it anywhere but it is common to use `user\Documents\NatLink`.
     ![Directory]({{ site.baseurl }}/images/directory.png)
