@@ -3,7 +3,7 @@ layout: page
 title: Getting started
 ---
 
-Once you have set up Mathfly, you should be greeted with the following window whenever you open Dragon. If this is not the case, or if there are error messages printed in the window, there may be a problem with your installation.
+Once you have set up Mathfly, you should be greeted with the following window whenever you open Dragon. If this is not the case, or if there are error messages printed in the window, there may be a problem with your installation. For assistance, feel free to post a message in the [Gitter channel](https://gitter.im/mathfly-dictation/community) or e-mail me ([mr1128@york.ac.uk](mailto:mr1128@york.ac.uk))
 
 ![Natlink greeting]({{ site.baseurl }}/images/natlink_greeting.png)
 
