@@ -6,9 +6,9 @@ title: Installation
 **Requires [Dragon](https://www.nuance.com/en-gb/dragon/business-solutions/dragon-professional-individual.html), ideally version 12+**
 
 ## 1. Python
-* Download and install [Python v2.7.X  32-bit](https://sourceforge.net/projects/natlink/files/pythonfornatlink/python2.7.14/python2.7.14.exe/download) or higher but not Python 3
+* Download and install [Python v2.7.X  32-bit](https://sourceforge.net/projects/natlink/files/pythonfornatlink/python2.7.14/python2.7.14.exe/download) or higher but not Python 3.
 
-Make sure to select `Add python to path`. This can be done manually by searching for "edit environment variables for your account" and adding your Python27 folder to the list of Path values
+Make sure to select `Add python to path`. This can be done manually by searching for "edit environment variables for your account" and adding your Python27 folder to the list of Path values.
 
 ## 2. NatLink
 * Download and install [Natlink](https://qh.antenna.nl/unimacro/installation/installation.html). Use natlink-4.1 victor or newer.
@@ -28,7 +28,7 @@ Make sure to select `Add python to path`. This can be done manually by searching
 2. Ensure that the details of your DNS setup are correct in the "info" tab.
 3. In the "configure" tab, under "NatLink" and "UserDirectory" click enable. When you are prompted for a folder, give it the location of the folder containing `_mathfly_main.py` - your mathfly folder from step three (`user\Documents\NatLink\mathfly-master`).
     ![Configure natlink]({{ site.baseurl }}/images/configure_natlink.png)
-4. Reboot Dragon. NatLink should load at the same time, with mathfly commands available. If this is not the case, or if there are error messages printed in the window, there may be a problem with your installation. For assistance, feel free to post a message in the [Gitter channel](https://gitter.im/mathfly-dictation/community) or e-mail me ([mr1128@york.ac.uk](mailto:mr1128@york.ac.uk))
+4. Reboot Dragon. NatLink should load at the same time, with mathfly commands available. If this is not the case, or if there are error messages printed in the window, there may be a problem with your installation. There are some troubleshooting tips [here](https://qh.antenna.nl/unimacro/installation/problemswithinstallation.html). For assistance, feel free to post a message in the [Gitter channel](https://gitter.im/mathfly-dictation/community) or e-mail me ([mr1128@york.ac.uk](mailto:mr1128@york.ac.uk))
     ![Natlink greeting]({{ site.baseurl }}/images/natlink_greeting.png)
 5. To test this:
     * Say "enable core" to enable the core mathfly commands (numbers, phonetic alphabet).
