@@ -15,7 +15,7 @@ Mathfly allows for dictation into both the free LyX document processor and Scien
 
 If you haven\'t already, download and install the [LyX document processor](https://www.lyx.org/).
 
-1. Say `enable core` and `enable LyX` to activate all of the commands you will need.
+1. Say `enable mathfly` to activate all of the commands you will need.
 2. Open LyX. Say `new file` to open a blank document.
 3. Say `math mode` to get into mathematics dictation mode.
 4. To enter the quadratic formula, say the following commands:
@@ -35,7 +35,7 @@ If you haven\'t already, download and install the [LyX document processor](https
 ***
 
 ## Scientific Notebook 5.5
-1. Say `enable core` and `enable scientific notebook` to activate all of the commands you will need.
+1. Say `enable mathfly` to activate all of the commands you will need.
 2. Open Scientific notebook. Say `new file` to open a blank document.
 3. Say `body math` to get into mathematics dictation mode.
 4. To enter the quadratic formula, say the following commands:
@@ -55,7 +55,7 @@ If you haven\'t already, download and install the [LyX document processor](https
 ***
 
 ## LaTeX
-1. Say `enable core` and `enable LaTeX` to activate all of the commands you will need.
+1. Say `enable mathfly` and `enable LaTeX` to activate all of the commands you will need.
 2. Open up your text editor, notepad will do but I personally like Sublime Text.
 3. Say the following commands:
     * `document class article`
