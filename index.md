@@ -9,7 +9,7 @@ A free, open source utility for dictating mathematical notation and LaTeX quickl
 * [Gitter channel](https://gitter.im/mathfly-dictation/community) - [![Join the chat at https://gitter.im/mathfly-dictation/community](https://badges.gitter.im/mathfly-dictation/community.svg)](https://gitter.im/mathfly-dictation/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 * Contact: [mr1128@york.ac.uk](mailto:mr1128@york.ac.uk)
 * [Installation instructions]({{ site.baseurl }}/installation.html)
-* For complete lists of the commands which Mathfly provides, read the [Core]({{ site.baseurl }}/docs/Core.pdf), [LyX]({{ site.baseurl }}/docs/LyX.pdf), [Scientific Notebook 5.5]({{ site.baseurl }}/docs/Scientific_Notebook.pdf) and [LaTeX]({{ site.baseurl }}/docs/LaTeX.pdf) documentation.
+* For complete lists of the commands which Mathfly provides, read the [Core](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Core.pdf), [LyX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LyX.pdf), [Scientific Notebook 5.5](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Scientific_Notebook.pdf) and [LaTeX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LaTeX.pdf) documentation.
 
 ***
 
@@ -34,6 +34,6 @@ For an even easier way of adding new commands, `alias` turns highlighted text in
 ***
 
 ## LaTeX
-Mathfly also contains a module for dictating into LaTeX documents, with commands for inserting objects, beginning and ending environments, reproducing premade templates, and crawling the web for references, all with simple voice commands. For a full list of commands, read the [LaTeX]({{ site.baseurl }}/docs/LaTeX.pdf) documentation.
+Mathfly also contains a module for dictating into LaTeX documents, with commands for inserting objects, beginning and ending environments, reproducing premade templates, and crawling the web for references, all with simple voice commands. For a full list of commands, read the [LaTeX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LaTeX.pdf) documentation.
 
 {% include youtubePlayer.html id="N9OzgJFP8tM" %}

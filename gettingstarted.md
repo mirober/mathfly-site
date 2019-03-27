@@ -30,7 +30,7 @@ If you haven\'t already, download and install the [LyX document processor](https
     * `numb two alpha` - note that the `numb` prefix is used to avoid confusion with the `down two` command.
     * `right two shock` - move out of the fraction and the math box and begin a new line
 5. Try entering all of the commands in one or two breaths.
-6. Keep going! See the [LyX]({{ site.baseurl }}/docs/LyX.pdf) and [Core]({{ site.baseurl }}/docs/Core.pdf) documentation for a full list of the commands which you can use.
+6. Keep going! See the [LyX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LyX.pdf) and [Core](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Core.pdf) documentation for a full list of the commands which you can use.
 
 ***
 
@@ -50,7 +50,7 @@ If you haven\'t already, download and install the [LyX document processor](https
     * `numb two alpha` - note that the `numb` prefix is used to avoid confusion with the `down two` command.
     * `right shock` - move out of the fraction and begin a new line
 5. Try entering all of the commands in one or two breaths.
-6. Keep going! See the [Scientific Notebook 5.5]({{ site.baseurl }}/docs/Scientific_Notebook.pdf) and [Core]({{ site.baseurl }}/docs/Core.pdf) documentation for a full list of the commands which you can use.
+6. Keep going! See the [Scientific Notebook 5.5](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Scientific_Notebook.pdf) and [Core](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Core.pdf) documentation for a full list of the commands which you can use.
 
 ***
 
@@ -64,5 +64,5 @@ If you haven\'t already, download and install the [LyX document processor](https
     * `insert section`
     * `cap introduction`
     * `right shock`
-4. Keep going! See the [LaTeX]({{ site.baseurl }}/docs/LaTeX.pdf) and [Core]({{ site.baseurl }}/docs/Core.pdf) documentation for a full list of the commands which you can use.
+4. Keep going! See the [LaTeX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LaTeX.pdf) and [Core](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Core.pdf) documentation for a full list of the commands which you can use.
 5. To add to or modify the command lists, say `configure LaTeX`.
