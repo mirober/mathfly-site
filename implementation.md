@@ -47,6 +47,33 @@ Rules created this way do not have CCR (continuous command recognition) however,
 
 To this end, Mathfly uses a couple of elements from the [Caster](https://github.com/dictation-toolbox/Caster) voice programming project. The most important of these are the MergeRule and the CCRMerger. The caster documentation explains these in detail but the basic idea is that instead of simply adding a rule to a grammar and loading it, rules are registered with a central object which then manages them. This enables rules to be enabled and disabled with a voice command, and also allows for multiple rules to be merged together into one rule and then converted to enable continuous recognition.
 
+
+The smart code for creating CCR rules is here, at the bottom of `ccrmerger.py`. Given an input rule, it creates a new rule with only one specification, which can be any number of repetitions of any of the commands in the input rule. When the rule is triggered, it executes each of the individual commands in sequence. Only this new rule is loaded in a grammar, not the input rule.
+```
+def _create_repeat_rule(self, rule):
+        ORIGINAL, SEQ, TERMINAL = "original", "caster_base_sequence", "terminal"
+        alts = [RuleRef(rule=rule)]
+        single_action = Alternative(alts)
+        max = SETTINGS["max_ccr_repetitions"]
+        sequence = Repetition(single_action, min=1, max=max, name=SEQ)
+        original = Alternative(alts, name=ORIGINAL)
+        terminal = Alternative(alts, name=TERMINAL)
+
+        class RepeatRule(CompoundRule):
+            spec = "[<" + ORIGINAL + "> original] [<" + SEQ + ">] [terminal <" + TERMINAL + ">]"
+            extras = [sequence, original, terminal]
+
+            def _process_recognition(self, node, extras):
+                original = extras[ORIGINAL] if ORIGINAL in extras else None
+                sequence = extras[SEQ] if SEQ in extras else None
+                terminal = extras[TERMINAL] if TERMINAL in extras else None
+                if original is not None: original.execute()
+                if sequence is not None:
+                    for action in sequence:
+                        action.execute()
+                if terminal is not None: terminal.execute()
+```
+
 ## Configuration files
 Another limitation of basic dragonfly rules is that they cannot be reloaded on-the-fly, requiring a full restart of Dragon for changes to be implemented, and that you need to edit Python source files to modify them.
 
