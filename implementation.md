@@ -45,7 +45,7 @@ These basic Key and Text objects are the way that the vast majority of Mathfly f
 ## Caster
 Rules created this way do not have CCR (continuous command recognition) however, meaning that you would have to pause between each command. For many commands this is not a problem, but for dictating mathematics we want to be able to dictate continuously without pauses.
 
-To this end, Mathfly uses a couple of elements from the Caster voice programming project. The most important of these are the MergeRule and the CCRMerger. The caster documentation explains these in detail but the basic idea is that instead of simply adding a rule to a grammar and loaning it, rules are registered with a central object which then manages them. This enables rules to be enabled and disabled with a voice command, and also allows for multiple rules to be merged together into one rule and then converted to enable continuous recognition.
+To this end, Mathfly uses a couple of elements from the Caster voice programming project. The most important of these are the MergeRule and the CCRMerger. The caster documentation explains these in detail but the basic idea is that instead of simply adding a rule to a grammar and loading it, rules are registered with a central object which then manages them. This enables rules to be enabled and disabled with a voice command, and also allows for multiple rules to be merged together into one rule and then converted to enable continuous recognition.
 
 ## Configuration files
 Another limitation of basic dragonfly rules is that they cannot be reloaded on-the-fly, requiring a full restart of Dragon for changes to be implemented, and that you need to edit Python source files to modify them.
@@ -87,3 +87,18 @@ class lyx_mathematics(MergeRule):
 
 control.nexus().merger.add_app_rule(lyx_mathematics())
 ```
+
+This looks slightly more complex, but has the same basic structure. The command specification (left of the configuration file) is mapped to a text object which types a backslash, followed by the text on the right of the configuration file, followed by a space. The extras are another element of dragonfly rules which allow for multiple options within each command specification. In this case, the command will be triggered whenever Dragon detects any of the words from `[tex_symbols1]` in `lyx.toml`.
+
+# Updates
+To save digging through old pull requests, I'll put the text of any major updates here.
+
+## Fix integer bug - 5
+The regular dragonfly IntegerRef class allows for example "162" to be dictated as "hundred sixty two", dropping the "one". This provides some convenience but when you allow multiple numbers side-by-side in a repeat rule, as mathfly does, it causes problems. Since Dragon cannot distinguish between "four hundred thirty three" and "four, hundred thirty three", it produces "4133" instead of "433" as intended.
+
+I've re-implemented the class in `lib/integers.py` so that it now requires "133" to be dictated as "one hundred thirty three", solving the problem. It should now be possible to dictate numbers any way you want:
+
+* `four six two`
+* `four sixty two`
+* `four hundred sixty two`
+* `forty six two`
