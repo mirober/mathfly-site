@@ -167,3 +167,21 @@ if rule.nested is not None:
     nested = rule.nested()
     rules.append(nested)
 ```
+
+## Vocabulary bug - 7
+A slightly strange bug was found recently. The new nested rules were all working apart from any which contained the phrase \"one to one\". \"one two one\" was found to also not work, but instead produced the text \"one-to-one\".
+
+There\'s the problem. Dragon is interpreting \"one-to-one\" and is somehow missing the fact that this string of words could be interpreted in a different way. It would obviously be possible to hardcode \"integral from one-to-one\" etc, but this would be a major pain and wouldn\'t scale. It is also possible to simply delete the word from your vocabulary, but this leaves a confusing problem for every user who ever tries to use a command with that phrase in.
+
+Luckily, and with a pointer from @danesprite, natlink exposes a function for deleting words from the active vocabulary. There is now a `delete_words` list in `settings.toml` and on start-up the following will be run to delete all of the words in it from the active vocabulary (`_mathfly_main.py`):
+```
+import natlink
+SETTINGS = utilities.load_toml_relative("config/settings.toml")
+    for word in SETTINGS["delete_words"]:
+        try:
+            natlink.deleteWord(word)
+        except:
+            pass
+```
+
+At the moment the list only contains \"one-to-one\", but this may be expanded if we find any more of these.
