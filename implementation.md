@@ -94,9 +94,9 @@ This looks slightly more complex, but has the same basic structure. The command 
 To save digging through old pull requests, I\'ll put the text of any major updates here.
 
 ## Fix integer bug - 5
-The regular dragonfly IntegerRef class allows for example "162" to be dictated as "hundred sixty two", dropping the "one". This provides some convenience but when you allow multiple numbers side-by-side in a repeat rule, as mathfly does, it causes problems. Since Dragon cannot distinguish between "four hundred thirty three" and "four, hundred thirty three", it produces "4133" instead of "433" as intended.
+The regular dragonfly `IntegerRef` class allows for example \"162\" to be dictated as \"hundred sixty two\", dropping the \"one\". This provides some convenience but when you allow multiple numbers side-by-side in a repeat rule, as mathfly does, it causes problems. Since Dragon cannot distinguish between \"four hundred thirty three\" and \"four, hundred thirty three\", it produces \"4133\" instead of \"433\" as intended.
 
-I\'ve re-implemented the class in `lib/integers.py` so that it now requires "133" to be dictated as "one hundred thirty three", solving the problem. It should now be possible to dictate numbers any way you want:
+I\'ve re-implemented the class in `lib/integers.py` so that it now requires \"133\" to be dictated as \"one hundred thirty three\", solving the problem. It should now be possible to dictate numbers any way you want:
 
 * `four six two`
 * `four sixty two`
