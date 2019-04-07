@@ -5,7 +5,7 @@ title: Implementation details
 
 This page gives some details about the implementation of Mathfly, as well as keeping track of alterations as they happen. It will hopefully be of use if anybody needs to maintain or extend Mathfly.
 
-There are two basic building blocks, apart from Dragon. Natlink, a C++ tool originally written by an employee of Dragon Systems called Joel Gould in 1999, allows grammars written in Python to be imported directly into Dragon. As far as I know Nuance does not endorse this but also hasn\'t made any effort to stop it, presumably because it\'s users still need to buy Dragon, which is all they really care about. Secondly, dragonfly is a Python library which provides easy abstractions for building grammars to be imported using Natlink.
+There are two basic building blocks, apart from Dragon. [Natlink](https://qh.antenna.nl/unimacro/installation/installation.html), a C++ tool originally written by an employee of Dragon Systems called Joel Gould in 1999, allows grammars written in Python to be imported directly into Dragon. As far as I know Nuance does not endorse this but also hasn\'t made any effort to stop it, presumably because it\'s users still need to buy Dragon, which is all they really care about. Secondly, [dragonfly](https://github.com/dictation-toolbox/dragonfly) is a Python library which provides easy abstractions for building grammars to be imported using Natlink.
 
 ## Dragonfly
 Once you have set a user directory in the Natlink configuration, all Python files in that directory whose names begin with an underscore will be imported whenever Dragon is started.
@@ -45,7 +45,7 @@ These basic Key and Text objects are the way that the vast majority of Mathfly f
 ## Caster
 Rules created this way do not have CCR (continuous command recognition) however, meaning that you would have to pause between each command. For many commands this is not a problem, but for dictating mathematics we want to be able to dictate continuously without pauses.
 
-To this end, Mathfly uses a couple of elements from the Caster voice programming project. The most important of these are the MergeRule and the CCRMerger. The caster documentation explains these in detail but the basic idea is that instead of simply adding a rule to a grammar and loading it, rules are registered with a central object which then manages them. This enables rules to be enabled and disabled with a voice command, and also allows for multiple rules to be merged together into one rule and then converted to enable continuous recognition.
+To this end, Mathfly uses a couple of elements from the [Caster](https://github.com/dictation-toolbox/Caster) voice programming project. The most important of these are the MergeRule and the CCRMerger. The caster documentation explains these in detail but the basic idea is that instead of simply adding a rule to a grammar and loading it, rules are registered with a central object which then manages them. This enables rules to be enabled and disabled with a voice command, and also allows for multiple rules to be merged together into one rule and then converted to enable continuous recognition.
 
 ## Configuration files
 Another limitation of basic dragonfly rules is that they cannot be reloaded on-the-fly, requiring a full restart of Dragon for changes to be implemented, and that you need to edit Python source files to modify them.
