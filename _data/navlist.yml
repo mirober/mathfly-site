@@ -8,3 +8,6 @@ pages:
 
 - title: Getting started
   url: gettingstarted.html
+
+- title: Implementation details
+  url: implementation.html
