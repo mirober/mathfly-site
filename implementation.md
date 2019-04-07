@@ -145,7 +145,7 @@ At the moment these accept other commands before them but require a pause afterw
 Update:
 I have added a new NestedRule class in `lib/merge/nestedrule` to achieve this. This rule type allows for the creation of rules which can take arbitrary sequences of commands from another rule. They are declared without extras and added in the `nested` property of a merge rule (same as `non`), the merged form of which will be used to form the extras list in `ccrmerger._create_repeat_rule`.
 
-The specifications in the rule's mapping must include `<sequence1>` and `<sequence2>`, `<before>` and `<after>` are optional and allow for other commands to be spoken before or after the rule.
+The specifications in the rule\'s mapping must include `<sequence1>` and `<sequence2>`, `<before>` and `<after>` are optional and allow for other commands to be spoken before or after the rule.
 Example command:
 ```
 "[<before>] integral from <sequence1> to <sequence2>":
@@ -154,7 +154,7 @@ Example command:
 
 Any commands which come before will be executed first, then the first action in the list, then the first sequence, then the second action in the list, then the second sequence, then the final action.  At the moment sequences have a maximum length of 6 commands and before and after 8.
 
-When the RepeatRule for the main rule is created, the following adds `Repetition` elements of all of its commands to the extras of the nested rule. I'm not 100% happy with the fact that the names and maximums for this are hardcoded, but at the moment I'm erring on the side of simplicity and assuming that the cases where this will be useful will be limited and soon exhausted.
+When the RepeatRule for the main rule is created, the following adds `Repetition` elements of all of its commands to the extras of the nested rule. I\'m not 100% happy with the fact that the names and maximums for this are hardcoded, but at the moment I\'m erring on the side of simplicity and assuming that the cases where this will be useful will be limited and soon exhausted.
 
 ```
 if rule.nested is not None:
