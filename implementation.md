@@ -51,27 +51,27 @@ To this end, Mathfly uses a couple of elements from the [Caster](https://github.
 The smart code for creating CCR rules is here, at the bottom of `ccrmerger.py`. Given an input rule, it creates a new rule with only one specification, which can be any number of repetitions of any of the commands in the input rule. When the rule is triggered, it executes each of the individual commands in sequence. Only this new rule is loaded in a grammar, not the input rule.
 ```
 def _create_repeat_rule(self, rule):
-        ORIGINAL, SEQ, TERMINAL = "original", "caster_base_sequence", "terminal"
-        alts = [RuleRef(rule=rule)]
-        single_action = Alternative(alts)
-        max = SETTINGS["max_ccr_repetitions"]
-        sequence = Repetition(single_action, min=1, max=max, name=SEQ)
-        original = Alternative(alts, name=ORIGINAL)
-        terminal = Alternative(alts, name=TERMINAL)
+    ORIGINAL, SEQ, TERMINAL = "original", "caster_base_sequence", "terminal"
+    alts = [RuleRef(rule=rule)]
+    single_action = Alternative(alts)
+    max = SETTINGS["max_ccr_repetitions"]
+    sequence = Repetition(single_action, min=1, max=max, name=SEQ)
+    original = Alternative(alts, name=ORIGINAL)
+    terminal = Alternative(alts, name=TERMINAL)
 
-        class RepeatRule(CompoundRule):
-            spec = "[<" + ORIGINAL + "> original] [<" + SEQ + ">] [terminal <" + TERMINAL + ">]"
-            extras = [sequence, original, terminal]
+    class RepeatRule(CompoundRule):
+        spec = "[<" + ORIGINAL + "> original] [<" + SEQ + ">] [terminal <" + TERMINAL + ">]"
+        extras = [sequence, original, terminal]
 
-            def _process_recognition(self, node, extras):
-                original = extras[ORIGINAL] if ORIGINAL in extras else None
-                sequence = extras[SEQ] if SEQ in extras else None
-                terminal = extras[TERMINAL] if TERMINAL in extras else None
-                if original is not None: original.execute()
-                if sequence is not None:
-                    for action in sequence:
-                        action.execute()
-                if terminal is not None: terminal.execute()
+        def _process_recognition(self, node, extras):
+            original = extras[ORIGINAL] if ORIGINAL in extras else None
+            sequence = extras[SEQ] if SEQ in extras else None
+            terminal = extras[TERMINAL] if TERMINAL in extras else None
+            if original is not None: original.execute()
+            if sequence is not None:
+                for action in sequence:
+                    action.execute()
+            if terminal is not None: terminal.execute()
 ```
 
 ## Configuration files
@@ -106,7 +106,7 @@ BINDINGS = utilities.load_toml_relative("config/lyx.toml")
 class lyx_mathematics(MergeRule):
     mapping = {
         BINDINGS["symbol1_prefix"] + " <symbol1>":
-                    Text("\\%(symbol1)s "),
+            Text("\\%(symbol1)s "),
     }
     extras = [
         Choice("symbol1", BINDINGS["tex_symbols1"]),
@@ -129,3 +129,41 @@ I\'ve re-implemented the class in `lib/integers.py` so that it now requires \"13
 * `four sixty two`
 * `four hundred sixty two`
 * `forty six two`
+
+
+## Nested rules - 6
+Cases have come up a few times where I wanted to create a rule which included arbitrary strings of other active CCR commands within the same rule. This is a first pass at implementing this and definitely needs some more abstraction.
+
+Current examples for testing purposes:
+* "sum from india equals one to november"
+* "integral from minus infinity to infinity", "integral from two to four"
+* "limit from november to infinity", "limit from x-ray to two"
+* "differential x-ray by yankee", "differential big lima squared by squared greek beta"
+
+At the moment these accept other commands before them but require a pause afterwards, because otherwise they can't distinguish where to finish the last subcomponent.
+
+Update:
+I have added a new NestedRule class in `lib/merge/nestedrule` to achieve this. This rule type allows for the creation of rules which can take arbitrary sequences of commands from another rule. They are declared without extras and added in the `nested` property of a merge rule (same as `non`), the merged form of which will be used to form the extras list in `ccrmerger._create_repeat_rule`.
+
+The specifications in the rule's mapping must include `<sequence1>` and `<sequence2>`, `<before>` and `<after>` are optional and allow for other commands to be spoken before or after the rule.
+Example command:
+```
+"[<before>] integral from <sequence1> to <sequence2>":
+    [Text("\\int _"), Key("right, caret"), Key("right")],
+```
+
+Any commands which come before will be executed first, then the first action in the list, then the first sequence, then the second action in the list, then the second sequence, then the final action.  At the moment sequences have a maximum length of 6 commands and before and after 8.
+
+When the RepeatRule for the main rule is created, the following adds `Repetition` elements of all of its commands to the extras of the nested rule. I'm not 100% happy with the fact that the names and maximums for this are hardcoded, but at the moment I'm erring on the side of simplicity and assuming that the cases where this will be useful will be limited and soon exhausted.
+
+```
+if rule.nested is not None:
+    bef  = Repetition(single_action, min=1, max=8, name="before")
+    aft  = Repetition(single_action, min=1, max=8, name="before")
+    seq1 = Repetition(single_action, min=1, max=6, name="sequence1")
+    seq2 = Repetition(single_action, min=1, max=6, name="sequence2")
+
+    rule.nested.extras = [bef, aft, seq1, seq2]
+    nested = rule.nested()
+    rules.append(nested)
+```
