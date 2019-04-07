@@ -3,9 +3,9 @@ layout: page
 title: Implementation details
 ---
 
-This page gives some details about the implementation of mathfly, as well as keeping track of alterations as they happen. It will hopefully be of use if anybody needs to maintain or extend mathfly.
+This page gives some details about the implementation of Mathfly, as well as keeping track of alterations as they happen. It will hopefully be of use if anybody needs to maintain or extend Mathfly.
 
-There are two basic building blocks of mathfly. Natlink, a C++ tool originally written by an employee of Dragon Systems called Joel Gould in 1999, allows grammars written in Python to be imported directly into Dragon. As far as I know Nuance does not endorse this but also hasn\'t made any effort to stop it, presumably because it\'s users still need to buy Dragon, which is all they really care about. Secondly, dragonfly is a Python library which provides easy abstractions for building grammars to be imported using Natlink.
+There are two basic building blocks, apart from Dragon. Natlink, a C++ tool originally written by an employee of Dragon Systems called Joel Gould in 1999, allows grammars written in Python to be imported directly into Dragon. As far as I know Nuance does not endorse this but also hasn\'t made any effort to stop it, presumably because it\'s users still need to buy Dragon, which is all they really care about. Secondly, dragonfly is a Python library which provides easy abstractions for building grammars to be imported using Natlink.
 
 ## Dragonfly
 Once you have set a user directory in the Natlink configuration, all Python files in that directory whose names begin with an underscore will be imported whenever Dragon is started.
@@ -50,7 +50,7 @@ To this end, Mathfly uses a couple of elements from the Caster voice programming
 ## Configuration files
 Another limitation of basic dragonfly rules is that they cannot be reloaded on-the-fly, requiring a full restart of Dragon for changes to be implemented, and that you need to edit Python source files to modify them.
 
-Mathfly gets around this by defining the vast majority of commands in `.toml` configuration files. I had never used Vocola before creating mathfly, but it was later pointed out that this is very similar to their system. Another example of convergent evolution I guess.
+Mathfly gets around this by defining the vast majority of commands in `.toml` configuration files. I had never used Vocola before creating Mathfly, but it was later pointed out that this is very similar to their system. Another example of convergent evolution I guess.
 
 The configuration file (`lyx.toml`) looks like this:
 ```
@@ -94,7 +94,7 @@ This looks slightly more complex, but has the same basic structure. The command 
 To save digging through old pull requests, I\'ll put the text of any major updates here.
 
 ## Fix integer bug - 5
-The regular dragonfly `IntegerRef` class allows for example \"162\" to be dictated as \"hundred sixty two\", dropping the \"one\". This provides some convenience but when you allow multiple numbers side-by-side in a repeat rule, as mathfly does, it causes problems. Since Dragon cannot distinguish between \"four hundred thirty three\" and \"four, hundred thirty three\", it produces \"4133\" instead of \"433\" as intended.
+The regular dragonfly `IntegerRef` class allows for example \"162\" to be dictated as \"hundred sixty two\", dropping the \"one\". This provides some convenience but when you allow multiple numbers side-by-side in a repeat rule, as Mathfly does, it causes problems. Since Dragon cannot distinguish between \"four hundred thirty three\" and \"four, hundred thirty three\", it produces \"4133\" instead of \"433\" as intended.
 
 I\'ve re-implemented the class in `lib/integers.py` so that it now requires \"133\" to be dictated as \"one hundred thirty three\", solving the problem. It should now be possible to dictate numbers any way you want:
 
