@@ -5,7 +5,7 @@ title: Implementation details
 
 This page gives some details about the implementation of mathfly, as well as keeping track of alterations as they happen. It will hopefully be of use if anybody needs to maintain or extend mathfly.
 
-There are two basic building blocks of mathfly. Natlink, a C++ tool originally written by an employee of Dragon Systems called Joel Gould in 1999, allows grammars written in Python to be imported directly into Dragon. As far as I know Nuance does not endorse this but also hasn't made any effort to stop it, presumably because it's users still need to buy Dragon, which is all they really care about. Secondly, dragonfly is a Python library which provides easy abstractions for building grammars to be imported using Natlink.
+There are two basic building blocks of mathfly. Natlink, a C++ tool originally written by an employee of Dragon Systems called Joel Gould in 1999, allows grammars written in Python to be imported directly into Dragon. As far as I know Nuance does not endorse this but also hasn\'t made any effort to stop it, presumably because it\'s users still need to buy Dragon, which is all they really care about. Secondly, dragonfly is a Python library which provides easy abstractions for building grammars to be imported using Natlink.
 
 ## Dragonfly
 Once you have set a user directory in the Natlink configuration, all Python files in that directory whose names begin with an underscore will be imported whenever Dragon is started.
@@ -91,12 +91,12 @@ control.nexus().merger.add_app_rule(lyx_mathematics())
 This looks slightly more complex, but has the same basic structure. The command specification (left of the configuration file) is mapped to a text object which types a backslash, followed by the text on the right of the configuration file, followed by a space. The extras are another element of dragonfly rules which allow for multiple options within each command specification. In this case, the command will be triggered whenever Dragon detects any of the words from `[tex_symbols1]` in `lyx.toml`.
 
 # Updates
-To save digging through old pull requests, I'll put the text of any major updates here.
+To save digging through old pull requests, I\'ll put the text of any major updates here.
 
 ## Fix integer bug - 5
 The regular dragonfly IntegerRef class allows for example "162" to be dictated as "hundred sixty two", dropping the "one". This provides some convenience but when you allow multiple numbers side-by-side in a repeat rule, as mathfly does, it causes problems. Since Dragon cannot distinguish between "four hundred thirty three" and "four, hundred thirty three", it produces "4133" instead of "433" as intended.
 
-I've re-implemented the class in `lib/integers.py` so that it now requires "133" to be dictated as "one hundred thirty three", solving the problem. It should now be possible to dictate numbers any way you want:
+I\'ve re-implemented the class in `lib/integers.py` so that it now requires "133" to be dictated as "one hundred thirty three", solving the problem. It should now be possible to dictate numbers any way you want:
 
 * `four six two`
 * `four sixty two`
