@@ -140,7 +140,7 @@ Current examples for testing purposes:
 * "limit from november to infinity", "limit from x-ray to two"
 * "differential x-ray by yankee", "differential big lima squared by squared greek beta"
 
-At the moment these accept other commands before them but require a pause afterwards, because otherwise they can't distinguish where to finish the last subcomponent.
+At the moment these accept other commands before them but require a pause afterwards, because otherwise they can\'t distinguish where to finish the last subcomponent.
 
 Update:
 I have added a new NestedRule class in `lib/merge/nestedrule` to achieve this. This rule type allows for the creation of rules which can take arbitrary sequences of commands from another rule. They are declared without extras and added in the `nested` property of a merge rule (same as `non`), the merged form of which will be used to form the extras list in `ccrmerger._create_repeat_rule`.

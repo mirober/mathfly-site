@@ -19,7 +19,7 @@ Make sure to select `Add python to path`. This can be done manually by searching
 2. Open up the zip file downloaded
 3. Extract the `mathfly-master` folder, you can put it anywhere but it is common to use `user\Documents\NatLink`.
     ![Directory]({{ site.baseurl }}/images/directory.png)
-4. Check and install Mathfly dependencies by clicking on `Pip Install Dependencies.bat` in the main directory.
+4. Check and install Mathfly dependencies by double clicking on `Pip Install Dependencies.bat` in the main directory.
     * This can be done manually by pip installing dragonfly2, toml, future, setuptools, pywin32 and wxpython
 
 ## 4. Setup and launch
