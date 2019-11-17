@@ -15,7 +15,6 @@ Mathfly allows for dictation into both the free LyX document processor and Scien
 
 If you haven\'t already, download and install the [LyX document processor](https://www.lyx.org/).
 
-1. Say `enable mathfly` to activate all of the commands you will need.
 2. Open LyX. Say `new file` to open a blank document.
 3. Say `math mode` to get into mathematics dictation mode.
 4. To enter the quadratic formula, say the following commands:
@@ -35,7 +34,6 @@ If you haven\'t already, download and install the [LyX document processor](https
 ***
 
 ## Scientific Notebook 5.5
-1. Say `enable mathfly` to activate all of the commands you will need.
 2. Open Scientific notebook. Say `new file` to open a blank document.
 3. Say `body math` to get into mathematics dictation mode.
 4. To enter the quadratic formula, say the following commands:
@@ -55,7 +53,7 @@ If you haven\'t already, download and install the [LyX document processor](https
 ***
 
 ## LaTeX
-1. Say `enable mathfly` and `enable LaTeX` to activate all of the commands you will need.
+1. Say `enable LaTeX` to activate all of the commands you will need.
 2. Open up your text editor, notepad will do but I personally like Sublime Text.
 3. Say the following commands:
     * `document class article`
@@ -66,3 +64,8 @@ If you haven\'t already, download and install the [LyX document processor](https
     * `right shock`
 4. Keep going! See the [LaTeX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LaTeX.pdf) and [Core](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Core.pdf) documentation for a full list of the commands which you can use.
 5. To add to or modify the command lists, say `configure LaTeX`.
+
+***
+
+## Notes
+* If you would like to disable the mathfly core commands, you can do this by saying `disable mathfly`.
