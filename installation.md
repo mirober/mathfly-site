@@ -11,7 +11,7 @@ title: Installation
 Make sure to select `Add python to path`. This can be done manually by searching for "edit environment variables for your account" and adding your Python27 folder to the list of Path values.
 
 ## 2. NatLink
-* Download and install [Natlink](https://qh.antenna.nl/unimacro/installation/installation.html). Use natlink-4.1 victor or newer.
+* Download and install [Natlink](https://qh.antenna.nl/unimacro/installation/installationstableversionpython2.html). Use natlink-4.1 victor or newer.
 
 ## 3. Mathfly
 1. Download Mathfly from the [master branch](https://github.com/mrob95/mathfly/archive/master.zip).
