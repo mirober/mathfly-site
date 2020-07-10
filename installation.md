@@ -19,7 +19,7 @@ Make sure to select `Add python to path`. This can be done manually by searching
 2. Open up the zip file downloaded
 3. Extract the `mathfly-master` folder, you can put it anywhere but it is common to use `user\Documents\NatLink`.
     ![Directory]({{ site.baseurl }}/images/directory.png)
-4. Install dependencies and configure Natlink by running the `install.bat`. Note that this script assumes that
+4. Install dependencies and configure Natlink by running the `install.bat` **as administrator**. Note that this script assumes that
     python and natlink were installed in their default locations (`C:\`), if this is not the case you may need to edit the script.
 
 ## 4. Setup and launch
