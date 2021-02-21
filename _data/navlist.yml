@@ -3,14 +3,14 @@ pages:
 - title: Home
   url: index.html
 
-- title: What is it? (old mathfly)
+- title: What is it? *
   url: index_old.html
 
-- title: Installation (old mathfly)
+- title: Installation *
   url: installation.html
 
-- title: Getting started (old mathfly)
+- title: Getting started *
   url: gettingstarted.html
 
-- title: Implementation details (old mathfly)
+- title: Implementation *
   url: implementation.html
