@@ -3,6 +3,8 @@ layout: page
 title: Getting started
 ---
 
+*21/02/2021 Note: this page refers to an old version of mathfly. Talon can do everything that mathfly could and more. See the [homepage]({{ site.baseurl }}/index.html) for details.*
+
 Once you have set up Mathfly, you should be greeted with the following window whenever you open Dragon. If this is not the case, or if there are error messages printed in the window, there may be a problem with your installation. For assistance, feel free to post a message in the [Gitter channel](https://gitter.im/mathfly-dictation/community) or e-mail me ([mike@mikeroberts.xyz](mailto:mike@mikeroberts.xyz))
 
 ![Natlink greeting]({{ site.baseurl }}/images/natlink_greeting.png)

@@ -1,39 +1,29 @@
 ---
 layout: page
-title: What is it?
+title: Getting started dictating mathematics
 ---
 
-A free, open source utility for dictating mathematical notation and LaTeX quickly and easily using [Dragon Professional Individual](https://www.nuance.com/en-gb/dragon/business-solutions/dragon-professional-individual.html). Currently supports the free, open source LyX document processor and Scientific Notebook 5.5 (allowing for drop-in replacement of MathTalk). Based on Natlink, dragonfly and Caster. With thanks to Alex Boche and David Conway.
+*21/02/2021 Page updated to recommend [talon](https://talonvoice.com/) for mathematics dictation rather than mathfly, which is now outdated. The old pages can be found [here]({{ site.baseurl }}/index_old.html), and the old instructions will still work, but if you are looking to get started dictating maths then proceed on this page.*
 
-* [GitHub](https://github.com/mrob95/mathfly)
-* [Gitter channel](https://gitter.im/mathfly-dictation/community) - [![Join the chat at https://gitter.im/mathfly-dictation/community](https://badges.gitter.im/mathfly-dictation/community.svg)](https://gitter.im/mathfly-dictation/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-* Contact: [mike@mikeroberts.xyz](mailto:mike@mikeroberts.xyz)
-* [Installation instructions]({{ site.baseurl }}/installation.html)
-* For complete lists of the commands which Mathfly provides, read the [Core](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Core.pdf), [LyX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LyX.pdf), [Scientific Notebook 5.5](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Scientific_Notebook.pdf) and [LaTeX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LaTeX.pdf) documentation.
+# What is talon?
+[Talon](https://talonvoice.com/) is a free, cross-platform application that provides customisable voice control and eye tracking. It can be used to create voice commands for almost anything, including navigating a browser, writing code and in our case, **dictating maths into a document processor**. Talon contains a built-in speech recognition engine, and on Windows it can load commands into Dragon NaturallySpeaking, so it can work alone or as a drop-in replacement for the old mathfly system and others like MathTalk.
 
-***
+This video gives a brief introduction to talon, and a demonstration of what dictating maths with it looks like (thanks to [ma-anwar](https://github.com/ma-anwar) for the great video):
 
-## Quick
-Mathfly interprets dictated commands on-the-fly quickly and continuously, making it far faster than other systems. As fast as you can speak, Mathfly can interpret.
+{% include youtubePlayer.html id="_E-3wiC3xKnVgc" %}
 
-While I have no data comparing dictation speed with normal writing speed, I will say that I have been using versions of this software to do exams throughout my economics undergraduate degree, and have never needed extra time or struggled to finish. Video demonstration:
+# Dictating mathematics using talon
 
-{% include youtubePlayer.html id="7eZ6fMztvwA" %}
+Talon scripts for dictating maths into into the [LyX](https://www.lyx.org/) or [Scientific Notebook 5.5](https://www.mackichan.com/index.html?products/dnloadreq55.html~mainFrame) document processors can be found by following this link: [https://github.com/mrob95/mathfly-talon](https://github.com/mrob95/mathfly-talon).
 
-***
+If you are new to all of this, follow these instructions to get started:
+1. Start by following the [talon getting started guide](https://talonvoice.com/docs/) to download talon and a general purpose set of scripts (currently `knausj_talon`).
+2. Once you have talon installed follow the [knausj_talon getting started guide](https://github.com/knausj85/knausj_talon#getting-started-with-talon) to familiarise yourself with the basic commands, including the phonetic alphabet. The learning curve here is quite steep, but it is worth persevering, as this is by far the most efficient and powerful way to control a computer by voice.
+3. Once you are set up and comfortable with talon, download or clone the [mathfly-talon repository](https://github.com/mrob95/mathfly-talon) into your user folder to add maths commands. To get started, say the `help maths` command while in LyX or Scientific Notebook for instructions and a list of available commands.
 
-## Infinitely modifiable
-The vast majority of Mathfly\'s commands are contained in plaintext config files in `mathfly/config/`, designed to be easy to edit and extend. If you need a new command, it\'s as simple as adding one line of plaintext. If you keep getting a command wrong, you can change it. If there are commands you don\'t need, you can delete them.
+If you have any problems with getting set up or using these scripts (or just want to chat to other users), feel free to ask for help in the [#maths channel on the talon slack](https://app.slack.com/client/T7FPSMV8F/C01ETRZNT46).
 
-{% include youtubePlayer.html id="vLwu9SWK030" %}
-
-For an even easier way of adding new commands, `alias` turns highlighted text into a new command.
-
-{% include youtubePlayer.html id="mZ-Y8O5RrUY" %}
-
-***
-
-## LaTeX
-Mathfly also contains a module for dictating into LaTeX documents, with commands for inserting objects, beginning and ending environments, reproducing premade templates, and crawling the web for references, all with simple voice commands. For a full list of commands, read the [LaTeX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LaTeX.pdf) documentation.
-
-{% include youtubePlayer.html id="N9OzgJFP8tM" %}
+Links:
+* [Short video demonstration](https://www.youtube.com/watch?v=7eZ6fMztvwA)
+* [#maths slack channel](https://app.slack.com/client/T7FPSMV8F/C01ETRZNT46)
+* [ma-anwar's version of these configs, with various additions](https://github.com/ma-anwar/mathfly)

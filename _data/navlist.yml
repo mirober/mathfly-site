@@ -1,13 +1,16 @@
 pages:
 
-- title: What is it?
+- title: Home
   url: index.html
 
-- title: Installation
+- title: What is it? (old mathfly)
+  url: index_old.html
+
+- title: Installation (old mathfly)
   url: installation.html
 
-- title: Getting started
+- title: Getting started (old mathfly)
   url: gettingstarted.html
 
-- title: Implementation details
+- title: Implementation details (old mathfly)
   url: implementation.html

@@ -3,6 +3,8 @@ layout: page
 title: Installation
 ---
 
+*21/02/2021 Note: this page refers to an old version of mathfly. Talon can do everything that mathfly could and more. See the [homepage]({{ site.baseurl }}/index.html) for details.*
+
 **Requires [Dragon](https://www.nuance.com/en-gb/dragon/business-solutions/dragon-professional-individual.html), ideally version 12+**
 
 ## 1. Python

@@ -3,6 +3,8 @@ layout: page
 title: Implementation details
 ---
 
+*21/02/2021 Note: this page refers to an old version of mathfly. Talon can do everything that mathfly could and more. See the [homepage]({{ site.baseurl }}/index.html) for details.*
+
 This page gives some details about the implementation of Mathfly, as well as keeping track of alterations as they happen. It will hopefully be of use if anybody needs to maintain or extend Mathfly.
 
 There are two basic building blocks, apart from Dragon. [Natlink](https://qh.antenna.nl/unimacro/installation/installation.html), a C++ tool originally written by an employee of Dragon Systems called Joel Gould in 1999, allows grammars written in Python to be imported directly into Dragon. As far as I know Nuance does not endorse this but also hasn\'t made any effort to stop it, presumably because it\'s users still need to buy Dragon, which is all they really care about. Secondly, [dragonfly](https://github.com/dictation-toolbox/dragonfly) is a Python library which provides easy abstractions for building grammars to be imported using Natlink.
