@@ -9,7 +9,7 @@ A free, open source utility for dictating mathematical notation and LaTeX quickl
 
 * [GitHub](https://github.com/mrob95/mathfly)
 * [Gitter channel](https://gitter.im/mathfly-dictation/community) - [![Join the chat at https://gitter.im/mathfly-dictation/community](https://badges.gitter.im/mathfly-dictation/community.svg)](https://gitter.im/mathfly-dictation/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-* Contact: [mike@mikeroberts.xyz](mailto:mike@mikeroberts.xyz)
+* Contact: [mike@mikrobe.net](mailto:mike@mikrobe.net)
 * [Installation instructions]({{ site.baseurl }}/installation.html)
 * For complete lists of the commands which Mathfly provides, read the [Core](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Core.pdf), [LyX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LyX.pdf), [Scientific Notebook 5.5](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/Scientific_Notebook.pdf) and [LaTeX](https://github.com/mrob95/mathfly/blob/master/mathfly/docs/LaTeX.pdf) documentation.
 

@@ -25,7 +25,7 @@ Make sure to select `Add python to path`. This can be done manually by searching
     python and natlink were installed in their default locations (`C:\`), if this is not the case you may need to edit the script.
 
 ## 4. Setup and launch
-1. Reboot Dragon. NatLink should load at the same time, with mathfly commands available. If this is not the case, or if there are error messages printed in the window, there may be a problem with your installation. There are some troubleshooting tips [here](https://qh.antenna.nl/unimacro/installation/problemswithinstallation.html). For assistance, feel free to post a message in the [Gitter channel](https://gitter.im/mathfly-dictation/community) or e-mail me ([mike@mikeroberts.xyz](mailto:mike@mikeroberts.xyz))
+1. Reboot Dragon. NatLink should load at the same time, with mathfly commands available. If this is not the case, or if there are error messages printed in the window, there may be a problem with your installation. There are some troubleshooting tips [here](https://qh.antenna.nl/unimacro/installation/problemswithinstallation.html). For assistance, feel free to post a message in the [Gitter channel](https://gitter.im/mathfly-dictation/community) or e-mail me ([mike@mikrobe.net](mailto:mike@mikrobe.net))
     ![Natlink greeting]({{ site.baseurl }}/images/natlink_greeting.png)
 2. To test this:
     * Open a fresh notepad window and try a command like "alpha bravo three hundred".

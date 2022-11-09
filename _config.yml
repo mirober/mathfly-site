@@ -7,7 +7,7 @@
 
 # Site settings
 title: Mathfly
-email: mike@mikeroberts.xyz
+email: mike@mikrobe.net
 description: > # this means to ignore newlines until "baseurl:"
   A set of scripts for the talon control system allowing quick and easy dictation of mathematics.
 # baseurl: "/" # the subpath of your site, e.g. /blog
