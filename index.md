@@ -3,10 +3,6 @@ layout: page
 title: Getting started dictating mathematics
 ---
 
-*21/02/2021 Page updated to recommend [talon](https://talonvoice.com/) for mathematics dictation rather than mathfly, which is now outdated. The old pages can be found [here]({{ site.baseurl }}/index_old.html), and the old instructions will still work, but if you are looking to get started dictating maths then proceed on this page.*
-
----
-
 # What is talon?
 [Talon](https://talonvoice.com/) is a free, cross-platform application that provides customisable voice control and eye tracking. It can be used to create voice commands for almost anything, including navigating a browser, writing code and in our case, **dictating maths into a document processor**. Talon contains a built-in speech recognition engine, and on Windows it can load commands into Dragon NaturallySpeaking, so it can work alone or as a drop-in replacement for the old mathfly system and others like MathTalk.
 

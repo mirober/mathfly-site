@@ -2,15 +2,3 @@ pages:
 
 - title: Home
   url: index.html
-
-- title: What is it? *
-  url: index_old.html
-
-- title: Installation *
-  url: installation.html
-
-- title: Getting started *
-  url: gettingstarted.html
-
-- title: Implementation *
-  url: implementation.html
